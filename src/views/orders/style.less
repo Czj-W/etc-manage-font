@@ -1,0 +1,35 @@
+.product {
+    position: relative;
+    display: flex;
+    &:last-child {
+        flex: 1;
+    }
+}
+.product_item {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+.product__cover {
+    width: 60px;
+}
+.product__info {
+    width: 160px;
+    text-overflow: -o-ellipsis-lastline;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    margin: 0 30px;
+}
+.product_tag {
+    width: 64px;
+    display: inline-block;
+}
+
+.refund-status {
+    position: absolute;
+    top: -16px;
+    right: -16px;
+}

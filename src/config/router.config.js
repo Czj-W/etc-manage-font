@@ -92,6 +92,27 @@ export const asyncRouterMap = [
         ]
       },
       {
+        path: '/coupon',
+        redirect: '/coupon/index',
+        name: 'coupon',
+        component: PageView,
+        meta: { title: '优惠券管理', icon: bxAnaalyse, permission: [] },
+        children: [
+          {
+            path: '/coupon/edit',
+            name: 'couponEdit',
+            component: () => import('@/views/coupon/edit'),
+            meta: { title: '发布优惠券', keepAlive: true, permission: [] }
+          },
+          {
+            path: '/coupon/index',
+            name: 'couponIndex',
+            component: () => import('@/views/coupon/index'),
+            meta: { title: '优惠券列表', keepAlive: true, permission: [] }
+          }
+        ]
+      },
+      {
         path: '/orders',
         redirect: '/orders/index',
         name: 'orders',
